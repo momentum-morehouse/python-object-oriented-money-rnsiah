@@ -67,8 +67,8 @@ class Money:
 
       if self.currency.symbol:
         return f"{self.currency.symbol}
-        {self.amount:{self.currency.digits}f}
-        "
+        {self.amount:.self.currency.digits}f}"
+        
       else:
         return f"{self.currency.code}
         {self.amount:.self.currency.digits}f}"
@@ -78,7 +78,7 @@ class Money:
         Should use the currency symbol if available, else use the code.
         Use the currency digits to determine number of digits to show.
         """
-        pass
+        
 
     def __repr__(self):
         return f"<Money {str(self)}>"
@@ -120,14 +120,17 @@ class Money:
         pass
 
     def mul(self, multiplier):
-      return Money(self.amount * multiplier)
+
+      test1=(self.amount * multiplier)
+      return test
         """
         Multiply a money object by a number to get a new money object.
         """
-        pass
+        
 
     def div(self, divisor):
-      return Money(self.amount / divisor)
+      test=(self.amount / divisor)
+      return test
         """
         Divide a money object by a number to get a new money object.
         """
